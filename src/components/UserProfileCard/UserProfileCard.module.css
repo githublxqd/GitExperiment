@@ -1,0 +1,203 @@
+/**
+ * 用户资料卡片组件样式
+ */
+
+/* 卡片基础样式 */
+.card {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 加载状态样式 */
+.loadingContainer,
+.errorContainer,
+.emptyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loadingText {
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* 错误状态样式 */
+.errorText {
+  color: #e74c3c;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.retryButton {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.retryButton:hover {
+  background-color: #2980b9;
+}
+
+/* 空状态样式 */
+.emptyText {
+  color: #666;
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* 头部区域样式 */
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* 头像样式 */
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f0f0f0;
+}
+
+.defaultAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #3498db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #f0f0f0;
+}
+
+.avatarInitials {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* 用户信息样式 */
+.userInfo {
+  margin-left: 20px;
+}
+
+.userName {
+  margin: 0 0 4px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.userEmail {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 简介样式 */
+.userBio {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 16px;
+}
+
+/* 用户详情样式 */
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.detailLabel {
+  font-weight: 600;
+  color: #666;
+  min-width: 60px;
+}
+
+.detailValue {
+  color: #333;
+}
+
+.detailLink {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.detailLink:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .card {
+    padding: 16px;
+  }
+  
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .userInfo {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+  
+  .avatar,
+  .defaultAvatar {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .avatarInitials {
+    font-size: 24px;
+  }
+}
