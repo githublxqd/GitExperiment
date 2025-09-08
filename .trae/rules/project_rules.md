@@ -4,6 +4,7 @@
 - **必须** 使用 TypeScript，并启用 `strict` 模式。
 - **必须** 使用函数式组件 (Functional Components) 和 Hooks。
 - **推荐** 使用 ESLint 和 Prettier 保持代码风格一致。
+- **推荐** 每个代码块都应该有注释，注释应该清晰、简洁、准确。
 
 ## 2. 组件开发
 - 组件文件名和组件名**必须**遵循帕斯卡命名法 (PascalCase)，例如 `UserProfile.tsx`。

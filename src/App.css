@@ -1,115 +1,162 @@
-/* 基础样式 */
+/**
+ * 基础样式
+ * 使用的技术：
+ * - CSS Reset: 重置浏览器默认样式
+ * - CSS Box Model: 使用box-sizing确保一致的盒模型
+ */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box; /* 确保宽度和高度包含边框和内边距 */
+  margin: 0; /* 重置默认外边距 */
+  padding: 0; /* 重置默认内边距 */
 }
 
+/**
+ * 根容器样式
+ * 应用的最外层容器
+ */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1rem;
-  min-height: 100vh;
+  max-width: 1280px; /* 最大宽度 */
+  margin: 0 auto; /* 水平居中 */
+  padding: 1rem; /* 内边距 */
+  min-height: 100vh; /* 最小高度为视口高度 */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    sans-serif; /* 字体族 */
+  -webkit-font-smoothing: antialiased; /* WebKit浏览器字体平滑 */
+  -moz-osx-font-smoothing: grayscale; /* Firefox字体平滑 */
 }
 
-/* 应用容器样式 */
+/**
+ * 应用容器样式
+ * 使用Flexbox布局
+ */
 .app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: flex; /* 使用Flexbox */
+  flex-direction: column; /* 垂直方向排列子元素 */
+  min-height: 100vh; /* 最小高度为视口高度 */
 }
 
-/* 头部样式 */
+/**
+ * 头部样式
+ * 应用的标题区域
+ */
 .app-header {
-  background-color: #f8f9fa;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #f8f9fa; /* 背景色 */
+  padding: 1.5rem; /* 内边距 */
+  margin-bottom: 2rem; /* 下边距 */
+  border-radius: 8px; /* 圆角 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 阴影 */
 }
 
+/**
+ * 头部标题样式
+ */
 .app-header h1 {
-  color: #2c3e50;
-  font-size: 2rem;
-  margin: 0;
-  text-align: center;
+  color: #2c3e50; /* 文字颜色 */
+  font-size: 2rem; /* 字体大小 */
+  margin: 0; /* 外边距 */
+  text-align: center; /* 文字居中 */
 }
 
-/* 主内容区域样式 */
+/**
+ * 主内容区域样式
+ * 应用的主要内容区域
+ */
 .app-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  flex: 1; /* 占据剩余空间 */
+  display: flex; /* 使用Flexbox */
+  flex-direction: column; /* 垂直方向排列子元素 */
+  gap: 2rem; /* 子元素间距 */
 }
 
-/* 用户ID输入区域样式 */
+/**
+ * 用户ID输入区域样式
+ * 包含标签和输入框
+ */
 .input-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  padding: 1rem;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex; /* 使用Flexbox */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  gap: 1rem; /* 子元素间距 */
+  flex-wrap: wrap; /* 允许换行 */
+  padding: 1rem; /* 内边距 */
+  background-color: #ffffff; /* 背景色 */
+  border-radius: 8px; /* 圆角 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 阴影 */
 }
 
+/**
+ * 输入标签样式
+ */
 .input-label {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #333;
-  min-width: 100px;
+  font-size: 1rem; /* 字体大小 */
+  font-weight: 500; /* 字体粗细 */
+  color: #333; /* 文字颜色 */
+  min-width: 100px; /* 最小宽度 */
 }
 
+/**
+ * 用户ID输入框样式
+ */
 .userId-input {
-  padding: 0.75rem 1rem;
-  border: 2px solid #e0e0e0;
-  border-radius: 4px;
-  font-size: 1rem;
-  width: 200px;
-  transition: border-color 0.3s ease;
+  padding: 0.75rem 1rem; /* 内边距 */
+  border: 2px solid #e0e0e0; /* 边框 */
+  border-radius: 4px; /* 圆角 */
+  font-size: 1rem; /* 字体大小 */
+  width: 200px; /* 宽度 */
+  transition: border-color 0.3s ease; /* 边框颜色过渡动画 */
 }
 
+/**
+ * 输入框聚焦样式
+ */
 .userId-input:focus {
-  outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  outline: none; /* 移除默认轮廓 */
+  border-color: #3498db; /* 边框颜色变化 */
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1); /* 聚焦阴影 */
 }
 
+/**
+ * 输入框占位符样式
+ */
 .userId-input::placeholder {
-  color: #999;
+  color: #999; /* 占位符颜色 */
 }
 
-/* 卡片展示区域样式 */
+/**
+ * 卡片展示区域样式
+ * 用于展示用户资料卡片
+ */
 .card-section {
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
+  display: flex; /* 使用Flexbox */
+  justify-content: center; /* 水平居中 */
+  padding: 1rem; /* 内边距 */
 }
 
-/* 空卡片样式 */
+/**
+ * 空卡片样式
+ * 当没有输入用户ID或用户不存在时显示
+ */
 .empty-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 400px;
-  padding: 40px 20px;
-  background-color: #f8f9fa;
-  border-radius: 12px;
-  text-align: center;
-  color: #666;
-  font-size: 1rem;
+  display: flex; /* 使用Flexbox */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  width: 100%; /* 宽度 */
+  max-width: 400px; /* 最大宽度 */
+  padding: 40px 20px; /* 内边距 */
+  background-color: #f8f9fa; /* 背景色 */
+  border-radius: 12px; /* 圆角 */
+  text-align: center; /* 文字居中 */
+  color: #666; /* 文字颜色 */
+  font-size: 1rem; /* 字体大小 */
 }
 
-/* 响应式设计 */
+/**
+ * 响应式设计
+ * 针对不同屏幕尺寸调整样式
+ * 使用的技术：
+ * - CSS Media Queries: 媒体查询
+ */
 @media (max-width: 768px) {
   #root {
     padding: 0.5rem;
